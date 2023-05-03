@@ -1,0 +1,5 @@
+node_modules
+
+# Public compiled files
+public/*
+!public/.gitignore
