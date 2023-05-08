@@ -13,7 +13,7 @@ module.exports = (env, opts) => {
     const plugins = {
         html: require('./webpack/plugins/html')(config),
         uglify: require('./webpack/plugins/uglify')(config),
-        extractStyles: require('./webpack/plugins/extractStyles')(config),
+        extractStyles: require('./webpack/plugins/extract-styles')(config),
     };
 
     return {
