@@ -6,6 +6,7 @@ module.exports = (env, opts) => {
 
     const rules = {
         files: require('./webpack/rules/files')(config),
+        html: require('./webpack/rules/html')(config),
         scripts: require('./webpack/rules/scripts')(config),
         styles: require('./webpack/rules/styles')(config),
     };
@@ -28,11 +29,15 @@ module.exports = (env, opts) => {
         module: {
             rules: [
                 ...rules.files,
+                ...rules.html,
                 ...rules.scripts,
                 ...rules.styles,
             ]
         },
         resolve: {
+            alias: {
+                "@assets": path.resolve(__dirname, 'source/assets/')
+            },
             // Add `.ts` and `.tsx` as a resolvable extension.
             extensions: [".ts", ".tsx", ".js"],
         },
