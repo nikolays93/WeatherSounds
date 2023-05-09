@@ -1,0 +1,36 @@
+@import "source/styles/_track";
+
+.player {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-size: cover;
+	transition: background .5s ease;
+
+	&__title {
+		text-shadow: 1px 1px 5px #000;
+	}
+
+	&__tracks {
+		--track-size: 175px;
+		--track-margin: 25px;
+
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&_rain {
+		background-image: url('~@assets/tracks/rain-bg.jpg');
+	}
+
+	&_summer {
+		background-image: url('~@assets/tracks/summer-bg.jpg');
+	}
+
+	&_winter {
+		background-image: url('~@assets/tracks/winter-bg.jpg');
+	}
+}
