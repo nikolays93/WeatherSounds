@@ -1,0 +1,54 @@
+.track {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: var(--track-size);
+	height: var(--track-size);
+	margin: var(--track-margin);
+	background-color: darkslategray;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border: 1px solid #FFFFFF;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: all .2s ease;
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&_playing, &_paused {
+		box-shadow: 0 0 5px 3px #ffffff;
+	}
+
+	&__image {
+		width: calc(var(--track-size) / 3);
+		height: calc(var(--track-size) / 3);
+	}
+
+	&_playing &__image {
+		display: none;
+	}
+
+	&_playing::before {
+		content: '';
+		display: block;
+		width: calc(var(--track-size) / 3);
+		height: calc(var(--track-size) / 3);
+		background: url('~@assets/icons/pause.svg') center no-repeat;
+		background-size: contain;
+	}
+
+	&_rain {
+		background-image: url('~@assets/tracks/rain-bg.jpg');
+	}
+
+	&_summer {
+		background-image: url('~@assets/tracks/summer-bg.jpg');
+	}
+
+	&_winter {
+		background-image: url('~@assets/tracks/winter-bg.jpg');
+	}
+}
