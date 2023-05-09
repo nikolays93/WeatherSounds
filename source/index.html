@@ -5,8 +5,28 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Weather player</title>
 </head>
 <body>
+<div id="player" class="player">
+    <h1 class="player__title">Weather sounds</h1>
+
+    <div class="player__tracks" data-track>
+        <div id="rain" class="track track_rain">
+            <img class="track__image" src="assets/icons/cloud-rain.svg" alt="">
+            <audio class="player__audio" src="assets/tracks/rain.mp3"></audio>
+        </div>
+        <div id="summer" class="track track_summer">
+            <img class="track__image" src="assets/icons/sun.svg" alt="">
+            <audio class="player__audio" src="assets/tracks/summer.mp3"></audio>
+        </div>
+        <div id="winter" class="track track_winter">
+            <img class="track__image" src="assets/icons/cloud-snow.svg" alt="">
+            <audio class="player__audio" src="assets/tracks/winter.mp3"></audio>
+        </div>
+    </div>
+
+    <label class="player__volume"></label>
+</div>
 </body>
 </html>
